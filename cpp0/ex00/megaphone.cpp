@@ -27,7 +27,7 @@ int main(int ac, char **av)
 			std::cout << argument;
 			i++;
 		}
-		std::cout << "\n";
+		std::cout << std::endl;
 	}
 	return 0;
 }
