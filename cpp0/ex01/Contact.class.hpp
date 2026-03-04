@@ -5,11 +5,27 @@
 class Contact
 {
 public:
-	
+	Contact(void);
+	~Contact(void);
+
+	//int	getContact();
+	std::string     getFirstName();
+	std::string	getLastName();
+	std::string	getNickName();
+	std::string	getDarkSecret();
+	int		getPhoneNumber();
+	void	setFirstName(std::string _firstName);
+	void	setLastName(std::string _lastName);
+	void	setNickName(std::string _nickName);
+	void	setDarkSecret(std::string _darkSecret);
+	void	setPhoneNumber(int _phoneNumber);
+
 private:
-	std::string	_first_name;
-	std::string	_last_name;
-	std::string	_nickname;
-	std::string	_dark_secret;
-	int		_phone_number;
+	std::string		_firstName;
+	std::string		_lastName;
+	std::string		_nickName;
+	std::string		_darkSecret;
+	int			_phoneNumber;
 };
+
+#endif

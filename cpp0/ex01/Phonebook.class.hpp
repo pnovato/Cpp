@@ -9,10 +9,8 @@ public:
 	int	a2;
 	float	a3;
 	
-	phonebook(char p1, int p2, float p3);
-	~phonebook(void);
-
-private:
+	Phonebook(char p1, int p2, float p3);
+	~Phonebook(void);
 	
 };
 
