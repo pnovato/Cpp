@@ -1,18 +1,26 @@
 #include "Phonebook.class.hpp"
 #include "Contact.class.hpp"
 
-int main ()
+int main()
 {
-	Contact	instance1;
-	Phonebook instance;
+	Contact contactInstance;
+	Phonebook phonebookInstance;
 
-	for (int  i = 0; i < 8;  i++)
-		std::cout << "Contatos de phonebook: "<< instance.contacts[i] << std::endl;
-	
 	std::string input;
+	std::cout << "Digite seu Nome: " << std::endl;
 	std::getline(std::cin, input);
-	instance1.setFirstName(input);
-	std::cout << "Contact first name is: " << instance1.getFirstName() << std::endl;
-		
+	contactInstance.setFirstName(input);
+	std::cout << "Contact first name is: " << contactInstance.getFirstName() << std::endl;
+
+	for (int i = 0; i < 7; i++)
+	{
+		Contact c = phonebookInstance.getContact(i);
+		std::cout << "Contato de phonebook [" << i << "]: "
+				  << c.getFirstName() << " "
+				  << c.getLastName() << " "
+				  << std::endl
+				  << std::endl;
+	}
+
 	return (0);
 }
