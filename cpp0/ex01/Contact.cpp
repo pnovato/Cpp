@@ -2,60 +2,60 @@
 
 Contact::Contact()
 {
-	std::cout << "Constructor called --> Contact" << std::endl;
+    std::cout << "Constructor called --> Contact" << std::endl;
 }
 
 Contact::~Contact()
 {
-	std::cout << "Destructor called --> Contact" << std::endl;
+    std::cout << "Destructor called --> Contact" << std::endl;
 }
 
-std::string Contact ::getFirstName()
+std::string	Contact::getFirstName()
 {
 	return this->_firstName;
 }
 
-std::string Contact ::getLastName()
+std::string	Contact::getLastName()
 {
-	return this->_lastName;
+	return	this->_lastName;
 }
 
-std::string Contact ::getNickName()
+std::string	Contact::getNickName()
 {
-	return this->_nickName;
+	return	this->_nickName;
 }
 
-std::string Contact ::getDarkSecret()
+std::string	Contact::getDarkSecret()
 {
 	return this->_darkSecret;
 }
 
-int Contact ::getPhoneNumber()
+int	Contact::getPhoneNumber()
 {
 	return this->_phoneNumber;
 }
 
-void Contact::setFirstName(std::string _firstName)
+void	Contact::setFirstName(std::string _firstName)
 {
 	this->_firstName = _firstName;
 }
 
-void Contact::setLastName(std::string _lastName)
+void	Contact::setLastName(std::string _lastName)
 {
 	this->_lastName = _lastName;
 }
 
-void Contact::setNickName(std::string _nickName)
+void	Contact::setNickName(std::string _nickName)
 {
 	this->_nickName = _nickName;
 }
 
-void Contact::setDarkSecret(std::string _darkSecret)
+void	Contact::setDarkSecret(std::string _darkSecret)
 {
 	this->_darkSecret = _darkSecret;
 }
 
-void Contact::setPhoneNumber(int _phoneNumber)
+void	Contact::setPhoneNumber(int _phoneNumber)
 {
 	this->_phoneNumber = _phoneNumber;
 }
