@@ -10,13 +10,14 @@ public:
 	~Phonebook(void);
 	void addContact();
 	std::string searchContact();
+	std::string parseString(std::string input);
 	Contact getContact(int index);
 	void exit();
 
 private:
 	Contact _contacts[8];
 	int _nextIndex;
-	int _count;
+	// int _count;
 };
 
 #endif

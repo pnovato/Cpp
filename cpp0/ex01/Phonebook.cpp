@@ -17,6 +17,12 @@ Contact Phonebook::getContact(int index)
 	return (index < 0 || index >= 7) ? Contact() : _contacts[index];
 }
 
+std::string Phonebook parseString(std::string input)
+{
+	std::string value;
+	if (input.str)
+}
+
 void Phonebook::addContact()
 {
 	std::string firstName;
@@ -25,11 +31,6 @@ void Phonebook::addContact()
 	std::string darkSecret;
 	std::string phoneNumber;
 
-	if (_nextIndex >= 7 || _count >= 8)
-	{
-		_nextIndex = 0;
-		_count = 0;
-	}
 	std::cout << "Adding contact" << std::endl;
 	while (firstName.empty())
 	{
@@ -63,11 +64,5 @@ void Phonebook::addContact()
 	_contacts[_nextIndex].setDarkSecret(darkSecret);
 	_contacts[_nextIndex].setPhoneNumber(phoneNumber);
 
-	std::cout << getContact(_nextIndex).getFirstName() << std::endl;
-	std::cout << getContact(_nextIndex).getLastName() << std::endl;
-	std::cout << getContact(_nextIndex).getNickName() << std::endl;
-	std::cout << getContact(_nextIndex).getDarkSecret() << std::endl;
-	std::cout << getContact(_nextIndex).getPhoneNumber() << std::endl;
-	_nextIndex++;
-	_count++;
+	_nextIndex = (_nextIndex + 1) % 8;
 }
