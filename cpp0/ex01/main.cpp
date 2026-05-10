@@ -16,8 +16,8 @@ int main()
 			phonebookInstance.addContact();
 		else if (command == "SEARCH")
 		{
-			phonebookInstance.searchContact();
-			// std::cout << std::right << std::setw(20) << "searching" << std::endl;
+			// phonebookInstance.searchContact();
+			std::cout << std::right << std::setw(20) << "searching" << std::endl;
 			// break;
 		}
 		else if (command == "EXIT")
