@@ -2,6 +2,7 @@
 #define PHONEBOOK_CLASS_HPP
 #include <iostream>
 #include "Contact.class.hpp"
+#include <iomanip>
 
 class Phonebook
 {
@@ -9,12 +10,10 @@ public:
 	Phonebook(void);
 	~Phonebook(void);
 	void addContact();
-	void printArray();
-	// std::string searchContact();
-	// std::string parseString(std::string input);
-	Contact getContact(int index);
-	std::string inputTrimmer(std::string &input);
+	void searchContact() const;
 	void exit();
+	Contact getContact(int index);
+	std::string inputTrimmer(const std::string &input) const;
 
 private:
 	Contact _contacts[8];

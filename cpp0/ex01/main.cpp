@@ -4,7 +4,6 @@
 
 int main()
 {
-	Contact contactInstance;
 	Phonebook phonebookInstance;
 
 	while (true)
@@ -15,15 +14,14 @@ int main()
 		if (command == "ADD")
 			phonebookInstance.addContact();
 		else if (command == "SEARCH")
-		{
-			// phonebookInstance.searchContact();
-			std::cout << std::right << std::setw(20) << "searching" << std::endl;
-			// break;
-		}
+			phonebookInstance.searchContact();
 		else if (command == "EXIT")
 			break;
 		else
+		{
 			std::cout << "Invalid command" << std::endl;
+			std::cout << "Try: ADD, SEARCH OR EXIT" << std::endl;
+		}
 	}
 	return (0);
 }
