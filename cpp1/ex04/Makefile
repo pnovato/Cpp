@@ -1,8 +1,8 @@
-NAME= Zombie
+NAME= Replace
 
 CXX= c++ -std=c++98
 
-SRCS = Zombie.cpp randomChump.cpp newZombie.cpp main.cpp
+SRCS = main.cpp replace.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

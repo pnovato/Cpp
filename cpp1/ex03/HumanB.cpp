@@ -1,13 +1,8 @@
-#include "Weapon.hpp"
+#include "HumanB.hpp"
 
-HumanB::HumanB(void)
+HumanB::HumanB(std::string human) : _nameB(human), _pvtWpB(NULL)
 {
-        std::cout << "HumanB has been created" << std::cout;
-}
-
-HumanB::HumanB(std::string human) : _nameB(something)
-{
-        std::cout << "Human B: " << _nameB << std::endl;
+    std::cout << "Human B: " << _nameB << std::endl;
 }
 
 HumanB::~HumanB(void)
@@ -15,13 +10,12 @@ HumanB::~HumanB(void)
         std::cout << "HumanB have been destroyed" << std::endl;
 }
 
-void Weapon HumanB::setWeapon(Weapon type)
+void HumanB::setWeapon(Weapon& type)
 {
-	this->_type = type;
+	this->_pvtWpB = &type;
 }
 
-void Weapon::attack(void)
+void HumanB::attack(void)
 {
-        std::cout << _nameB << " attacks with " << _pvtWpB << std::endl;
+        std::cout << _nameB << " attacks with " << _pvtWpB->getType() << std::endl;
 }
-

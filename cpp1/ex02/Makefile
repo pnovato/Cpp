@@ -1,6 +1,6 @@
 NAME= Zombie
 
-CXX= c++
+CXX= c++ -std=c++98
 
 SRCS = main.cpp
 

@@ -1,13 +1,8 @@
-#include "Weapon.hpp"
+#include "HumanA.hpp"
 
-HumanA::HumanA(void)
+HumanA::HumanA(std::string human, Weapon& weapon) : _nameA(human), _pvtWpA(weapon)
 {
-	std::cout << "HumanA has been created" << std::cout;
-}
-
-Weapon HumanA::HumanA(std::string human, Weapon something) : _pvtWpA(human), _nameA(something)
-{
-	std::cout << "Human A: " << _nameA << " has a " << _pvtWpA << std::endl;
+	std::cout << "Human A: " << _nameA << " has a " << _pvtWpA.getType() << std::endl;
 }
 
 HumanA::~HumanA(void)
@@ -15,7 +10,7 @@ HumanA::~HumanA(void)
 	std::cout << "HumanA have been destroyed" << std::endl;
 }
 
-void Weapon::attack(void)
+void HumanA::attack(void)
 {
-	std::cout << _nameA << " attacks with " << _pvtWpA << std::endl;
+	std::cout << _nameA << " attacks with " << _pvtWpA.getType() << std::endl;
 }
