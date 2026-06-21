@@ -1,6 +1,20 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: pnovato- <pnovato-@student.42porto.com>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/06/21 14:51:19 by pnovato-          #+#    #+#              #
+#    Updated: 2026/06/21 14:51:21 by pnovato-         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME= Phonebook
 
-CXX= c++
+CXX= c++ 
+
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = Phonebook.cpp Contact.cpp main.cpp
 

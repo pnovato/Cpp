@@ -1,12 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pnovato- <pnovato-@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/21 14:48:21 by pnovato-          #+#    #+#             */
+/*   Updated: 2026/06/21 14:48:27 by pnovato-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <string>
 #include <algorithm>
-
-/*std::string str_toupper(std::string s)
-{
-	std::transform(s.begin(), s.end(), s.begin(), [](unsigned char c) {return (std::toupper(c));});
-	return (s);
-}*/
 
 int main(int ac, char **av)
 {
@@ -23,7 +29,6 @@ int main(int ac, char **av)
 		{
 			std::string argument = av[i];
 			std::transform(argument.begin(), argument.end(), argument.begin(), toupper);	
-			//std::cout << str_toupper(argument);
 			std::cout << argument;
 			i++;
 		}
