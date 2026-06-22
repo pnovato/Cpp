@@ -1,10 +1,10 @@
-NAME= Complain
+NAME= Fixed
 
 CXX= c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Harl.cpp
+SRCS = main.cpp Fixed.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
