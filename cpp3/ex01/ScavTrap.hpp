@@ -25,6 +25,10 @@ class ScavTrap : public ClapTrap
     	~ScavTrap();
     	void attack(const std::string& target);
     	void guardGate();
+		std::string getName();
+		unsigned int getHit();
+		unsigned int getAttackDamage();
+		int	getEnergyPoints();
 };
 
 #endif
