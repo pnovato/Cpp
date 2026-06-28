@@ -6,11 +6,11 @@
 #    By: pnovato- <pnovato-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/27 12:45:19 by pnovato-          #+#    #+#              #
-#    Updated: 2026/06/27 18:14:41 by pnovato-         ###   ########.fr        #
+#    Updated: 2026/06/27 21:41:10 by pnovato-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME= Fixed
+NAME= ClapTrap
 
 CXX= c++
 
