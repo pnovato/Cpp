@@ -10,13 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME= Fixed
+NAME= Animal
 
 CXX= c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WronAnimal.cpp WrongCat.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
