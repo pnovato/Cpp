@@ -6,7 +6,7 @@
 #    By: pnovato- <pnovato-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/27 12:45:19 by pnovato-          #+#    #+#              #
-#    Updated: 2026/06/27 18:14:36 by pnovato-         ###   ########.fr        #
+#    Updated: 2026/07/01 20:14:05 by pnovato-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CXX= c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WronAnimal.cpp WrongCat.cpp
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

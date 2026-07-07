@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pnovato- <pnovato-@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/07/01 19:28:44 by pnovato-          #+#    #+#             */
+/*   Updated: 2026/07/01 19:28:46 by pnovato-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
@@ -23,13 +35,15 @@ int main()
     std::cout << "===== Deep copy test =====" << std::endl;
 
     Dog original;
-    // TODO: usa o getBrain() (ou equivalente) pra setar uma ideia no brain do original
+    original.getBrain()->setIdea("I love bones" ,0);
 
     Dog copy(original); // copy constructor
 
-    // TODO: muda uma ideia só na copy
-    // TODO: imprime a ideia do original e da copy no mesmo índice
-    //       -> se forem diferentes, prova que a cópia é profunda
+    copy.getBrain()->setIdea("I love cats" ,0); // muda só na copy
+
+    std::cout << "original idea[0]: " << original.getBrain()->getIdea(0) << std::endl;
+    std::cout << "copy idea[0]: " << copy.getBrain()->getIdea(0) << std::endl;
+
 
     return 0;
 }

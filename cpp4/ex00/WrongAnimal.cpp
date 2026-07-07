@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pnovato- <pnovato-@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/07/01 19:26:23 by pnovato-          #+#    #+#             */
+/*   Updated: 2026/07/01 20:40:30 by pnovato-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal() : _type("WrongAnimal")
@@ -23,7 +35,7 @@ WrongAnimal::~WrongAnimal()
     std::cout << "WrongAnimal destructor called" << std::endl;
 }
 
-void WrongAnimal::makeSound()
+void WrongAnimal::makeSound() const
 {
     std::cout << "Some generic wrong animal sound" << std::endl;
 }

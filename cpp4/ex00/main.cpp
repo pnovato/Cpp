@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pnovato- <pnovato-@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/07/01 19:26:17 by pnovato-          #+#    #+#             */
+/*   Updated: 2026/07/01 20:40:33 by pnovato-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
@@ -12,7 +24,7 @@ int main()
 
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
-    i->makeSound(); //will output the cat sound!
+    i->makeSound(); //cat sound!
     j->makeSound();
     meta->makeSound();
 
@@ -22,11 +34,11 @@ int main()
 
     std::cout << "----- Wrong version -----" << std::endl;
 
-    const WrongAnimal* wrongMeta = new WrongAnimal();
-    const WrongAnimal* wrongCat = new WrongCat();
+    WrongAnimal* wrongMeta = new WrongAnimal();
+    WrongAnimal* wrongCat = new WrongCat();
 
     wrongMeta->makeSound();
-    wrongCat->makeSound(); // will output WrongAnimal sound, NOT WrongCat's!
+    wrongCat->makeSound(); //WrongAnimal sound, NO WrongCat's!
 
     delete wrongMeta;
     delete wrongCat;

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pnovato- <pnovato-@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/07/01 19:27:59 by pnovato-          #+#    #+#             */
+/*   Updated: 2026/07/01 19:28:00 by pnovato-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Animal.hpp"
 
 Animal::Animal() : _type("Animal")
@@ -10,7 +22,7 @@ Animal::Animal(const Animal & src) : _type(src._type)
     std::cout << "Animal copy constructor called" << std::endl;
 }
 
-Animal & operator=(const Animal * rhs)
+Animal & Animal::operator=(const Animal & rhs)
 {
     std::cout << "Animal copy assignment operator called" << std::endl;
     if (this != &rhs)

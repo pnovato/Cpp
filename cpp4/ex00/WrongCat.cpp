@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pnovato- <pnovato-@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/07/01 19:26:30 by pnovato-          #+#    #+#             */
+/*   Updated: 2026/07/01 20:44:49 by pnovato-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "WrongCat.hpp"
 
 WrongCat::WrongCat()
@@ -24,7 +36,7 @@ WrongCat::~WrongCat()
     std::cout << "WrongCat destructor called" << std::endl;
 }
 
-void WrongCat::makeSound()
+void WrongCat::makeSound() const
 {
     std::cout << "Meow (but wrong)!" << std::endl;
 }

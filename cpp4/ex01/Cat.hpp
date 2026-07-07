@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pnovato- <pnovato-@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/07/01 19:28:29 by pnovato-          #+#    #+#             */
+/*   Updated: 2026/07/01 19:28:30 by pnovato-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CAT_HPP
 # define CAT_HPP
 # include "Animal.hpp"
@@ -11,6 +23,7 @@ class Cat : public Animal
         Cat & operator=(const Cat & rhs);
         ~Cat();
         void makeSound() const;
+		Brain* getBrain() const;
     private:
         Brain* _brain;
 };

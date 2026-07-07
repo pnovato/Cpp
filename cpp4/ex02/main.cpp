@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pnovato- <pnovato-@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/07/01 19:30:51 by pnovato-          #+#    #+#             */
+/*   Updated: 2026/07/01 20:12:17 by pnovato-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
@@ -22,9 +34,17 @@ int main()
 
     std::cout << "===== Deep copy test =====" << std::endl;
 
-    // (seu teste de deep copy do ex01 aqui, sem mudanças)
+    Dog original;
+    original.getBrain()->setIdea("I love bones", 0);
 
-    // Animal a; // <-- isso NÃO deve compilar mais. Descomenta pra confirmar o erro, depois comenta de novo.
+    Dog copy(original);
+    copy.getBrain()->setIdea("I love bones", 0);
+
+    std::cout << "original idea[0]: " << original.getBrain()->getIdea(0) << std::endl;
+    std::cout << "copy idea[0]: " << copy.getBrain()->getIdea(0) << std::endl;
+
+    std::cout << "===== Abstract class test =====" << std::endl;
+    // Animal a; // <-- isso NÃO deve compilar mais
 
     return 0;
 }

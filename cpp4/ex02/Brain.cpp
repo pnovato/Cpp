@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pnovato- <pnovato-@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/07/01 19:29:48 by pnovato-          #+#    #+#             */
+/*   Updated: 2026/07/01 19:30:08 by pnovato-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Brain.hpp"
 
 Brain::Brain()
@@ -29,13 +41,13 @@ Brain::~Brain()
 
 void Brain::setIdea(const std::string & idea, int x)
 {
-    if (index >= 0 && index < 100)
-        _ideas[index] = idea;
+    if (x >= 0 && x < 100)
+        _ideas[x] = idea;
 }
 
 std::string Brain::getIdea(int x) const
 {
-    if (index >= 0 && index < 100)
-        return _ideas[index];
+    if (x >= 0 && x < 100)
+        return _ideas[x];
     return "";
 }

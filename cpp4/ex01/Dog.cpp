@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pnovato- <pnovato-@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/07/01 19:28:34 by pnovato-          #+#    #+#             */
+/*   Updated: 2026/07/01 19:28:34 by pnovato-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Dog.hpp"
 
 Dog::Dog()
@@ -33,4 +45,9 @@ Dog::~Dog()
 void Dog::makeSound() const
 {
     std::cout << "Woof woof!" << std::endl;
+}
+
+Brain* Dog::getBrain() const
+{
+    return _brain;
 }
