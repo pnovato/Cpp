@@ -4,6 +4,8 @@
 #include <string>
 #include <iostream>
 
+class Form;
+
 class Bureaucrat
 {
     private:
@@ -16,7 +18,7 @@ class Bureaucrat
         Bureaucrat(const Bureaucrat& src);
         Bureaucrat& operator=(const Bureaucrat& rhs);
         ~Bureaucrat();
-		void signForm();
+		void signForm(Form const & form);
 
         class GradeTooHighException : public std::exception 
         {

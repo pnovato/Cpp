@@ -33,9 +33,14 @@ Bureaucrat & Bureaucrat::operator=(const Bureaucrat& rhs)
     return (*this);
 }
 
-void signForm()
+void Bureaucrat::signForm()
 {
-	
+    Form::beSigned;
+    if ()
+    {
+        /* code */
+    }
+    
 }	
 
 const std::string Bureaucrat::getName() const
