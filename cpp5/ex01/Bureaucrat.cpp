@@ -1,4 +1,5 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat() : _name("Default"), _grade(150)
 {
@@ -33,14 +34,18 @@ Bureaucrat & Bureaucrat::operator=(const Bureaucrat& rhs)
     return (*this);
 }
 
-void Bureaucrat::signForm()
+void Bureaucrat::signForm(Form & form)
 {
-    Form::beSigned;
-    if ()
-    {
-        /* code */
-    }
-    
+	try
+	{
+		form.beSigned(*this);
+		std::cout << _name << " signed " << form.getName() << "\n";
+	}
+	catch (std::exception & e)
+	{
+		std::cout << _name << " couldn't sign " << form.getName() << " because " << e.what() << '\n';
+	}
+	
 }	
 
 const std::string Bureaucrat::getName() const
@@ -69,16 +74,16 @@ void Bureaucrat::decrement()
 
 const char* Bureaucrat::GradeTooHighException::what() const throw() //O retorno e uma string
 {
-    return ("Grade is to high!");
+    return ("Grade is too high!");
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
-    return ("Grade is to low...");
+    return ("Grade is too low...");
 }
 
 std::ostream & operator<<(std::ostream & out, const Bureaucrat & x) //Ex: std::cout << meuBureaucrat . Nao funciona pq o sistema nao sabe oq e printar um objeto
 {
-    out << x.getName() << ", with grade " << x.getGrade();
+    out << x.getName() << ", Bureaucrat with grade " << x.getGrade();
     return (out);
 }

@@ -6,7 +6,7 @@
 #    By: pnovato- <pnovato-@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/27 12:45:19 by pnovato-          #+#    #+#              #
-#    Updated: 2026/07/01 20:14:05 by pnovato-         ###   ########.fr        #
+#    Updated: 2026/10/31 16:05:03 by pnovato-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CXX= c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Bureaucrat.cpp
+SRCS = main.cpp Bureaucrat.cpp Form.cpp 
 
 OBJS = $(SRCS:.cpp=.o)
 

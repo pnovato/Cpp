@@ -18,7 +18,7 @@ class Bureaucrat
         Bureaucrat(const Bureaucrat& src);
         Bureaucrat& operator=(const Bureaucrat& rhs);
         ~Bureaucrat();
-		void signForm(Form const & form);
+		void signForm(Form & form);
 
         class GradeTooHighException : public std::exception 
         {
